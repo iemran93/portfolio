@@ -7,13 +7,10 @@ import { RouterView } from 'vue-router';
     <UHeader />
 
     <UMain>
-      <NuxtLayout>
-        <NuxtPage />
-      </NuxtLayout>
+      <RouterView />
     </UMain>
 
     <UFooter />
-    <RouterView />
   </UApp>
 </template>
 
