@@ -1,25 +1,20 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <header>
-    <UApp>
-      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <UApp>
+    <UHeader />
 
-      <div class="wrapper">
-        <HelloWorld msg="You did it!" />
+    <UMain>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </UMain>
 
-        <nav>
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/about">About</RouterLink>
-        </nav>
-      </div>
-    </UApp>
-  </header>
-
-  <RouterView />
+    <UFooter />
+    <RouterView />
+  </UApp>
 </template>
 
 <style scoped>
