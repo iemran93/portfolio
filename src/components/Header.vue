@@ -25,11 +25,7 @@ const items = computed<NavigationMenuItem[]>(() => [
 </script>
 
 <template>
-  <UHeader>
-    <template #title>
-      <Logo class="h-6 w-auto" />
-    </template>
-
+  <UHeader title="Emran Dev">
     <UNavigationMenu :items="items" />
 
     <template #right>
@@ -39,12 +35,15 @@ const items = computed<NavigationMenuItem[]>(() => [
         <UButton
           color="neutral"
           variant="ghost"
-          to="https://github.com/nuxt/ui"
+          to="https://github.com/iemran93"
           target="_blank"
           icon="i-simple-icons-github"
           aria-label="GitHub"
         />
       </UTooltip>
+    </template>
+    <template #body>
+      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
     </template>
   </UHeader>
 </template>

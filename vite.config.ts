@@ -9,7 +9,19 @@ import VueRouter from 'vue-router/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [VueRouter({}),vue(), vueJsx(), vueDevTools(), ui()],
+  plugins: [
+    VueRouter({}),
+    vue(),
+    vueJsx(),
+    vueDevTools(),
+    ui({
+      icon: {
+        clientBundle: {
+          icons: ['simple-icons:github'],
+        },
+      },
+    }),
+  ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
