@@ -21,7 +21,7 @@ export default defineConfigWithVueTs(
   vueTsConfigs.recommended,
   {
     name: 'app/pages-single-word-ok',
-    files: ['src/pages/**/*.vue'],
+    files: ['src/**/*.vue'],
     rules: {
       'vue/multi-word-component-names': 'off',
     },
