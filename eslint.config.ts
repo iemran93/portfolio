@@ -19,7 +19,13 @@ export default defineConfigWithVueTs(
 
   ...pluginVue.configs['flat/essential'],
   vueTsConfigs.recommended,
-
+  {
+    name: 'app/pages-single-word-ok',
+    files: ['src/pages/**/*.vue'],
+    rules: {
+      'vue/multi-word-component-names': 'off',
+    },
+  },
   ...pluginOxlint.buildFromOxlintConfigFile('.oxlintrc.json'),
 
   skipFormatting,
