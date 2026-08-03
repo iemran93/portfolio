@@ -15,6 +15,13 @@ export default defineConfig({
     vueJsx(),
     vueDevTools(),
     ui({
+      ui: {
+        colors: {
+          primary: 'ayu',
+          secondary: 'purple',
+          neutral: 'slate',
+        },
+      },
       icon: {
         clientBundle: {
           icons: ['simple-icons:github'],

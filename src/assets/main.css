@@ -2,5 +2,21 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
 
-#app {
+@theme static {
+  /*colors*/
+  --color-ayu-50: #fdf6e8;
+  --color-ayu-100: #fbeecc;
+  --color-ayu-200: #f6dc99;
+  --color-ayu-300: #f2c966;
+  --color-ayu-400: #edb73d;
+  --color-ayu-500: #e6b450;
+  --color-ayu-600: #c9942f;
+  --color-ayu-700: #a37324;
+  --color-ayu-800: #7d571d;
+  --color-ayu-900: #5c3f15;
+  --color-ayu-950: #33220b;
+
+  /*font*/
+  --font-sans: 'Rubik Mono One', system-ui, sans-serif;
+  --font-weight-normal: 200;
 }
