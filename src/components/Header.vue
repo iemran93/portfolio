@@ -27,10 +27,8 @@ const items = computed<NavigationMenuItem[]>(() => [
 <template>
   <UHeader title="Emran Dev">
     <UNavigationMenu :items="items" />
-
     <template #right>
       <UColorModeButton />
-
     </template>
     <template #body>
       <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />

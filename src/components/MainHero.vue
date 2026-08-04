@@ -33,15 +33,7 @@ const links = ref<ButtonProps[]>([
 </script>
 
 <template>
-  <UPageHero
-    title="Hello there"
-    orientation="vertical"
-    :links="links"
-    :ui="{
-      container:
-        'flex flex-col lg:grid pt-8 pb-24 sm:pt-8 sm:pb-24 lg:pt-8 lg:pb-24 gap-16 sm:gap-y-24',
-    }"
-  >
+  <UPageHero title="Hello there" orientation="vertical" :links="links" :ui="{ container: '' }">
     <template #headline>
       <div class="w-full flex justify-center">
         <LogoTerminal size="200px" />

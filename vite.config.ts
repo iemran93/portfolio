@@ -21,6 +21,7 @@ export default defineConfig({
           secondary: 'purple',
           neutral: 'slate',
         },
+        container: {},
       },
       icon: {
         clientBundle: {
