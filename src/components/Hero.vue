@@ -1,19 +1,33 @@
 <script setup lang="ts">
-import type { ButtonProps } from '@nuxt/ui';
-import { ref } from 'vue';
+import LogoTerminal from '@/components/LogoTerminal.vue'
+import type { ButtonProps } from '@nuxt/ui'
+import { ref } from 'vue'
 
 const links = ref<ButtonProps[]>([
   {
     to: 'https://github.com/iemran93',
     icon: 'i-simple-icons-github',
     variant: 'ghost',
-    color: 'neutral'
+    color: 'neutral',
   },
   {
     to: 'https://x.com/iemran',
     icon: 'i-simple-icons:x',
     variant: 'ghost',
-    color: 'neutral'
+    color: 'neutral',
+  },
+  {
+    to: 'https://youtube.com',
+    icon: 'i-simple-icons:youtube',
+    variant: 'ghost',
+    color: 'neutral',
+  },
+  {
+    label: 'Contact me',
+    to: 'https://youtube.com',
+    icon: 'i-simple-icons:gmail',
+    variant: 'soft',
+    color: 'primary',
   },
 ])
 </script>
@@ -21,13 +35,27 @@ const links = ref<ButtonProps[]>([
 <template>
   <UPageHero
     title="Hello there"
-    description="My name is Emran and I'm Full-stack developer, I enjoy coding and making website"
     orientation="vertical"
     :links="links"
+    :ui="{
+      container:
+        'flex flex-col lg:grid pt-8 pb-24 sm:pt-8 sm:pb-24 lg:pt-8 lg:pb-24 gap-16 sm:gap-y-24',
+    }"
   >
+    <template #headline>
+      <div class="w-full flex justify-center">
+        <LogoTerminal size="200px" />
+      </div>
+    </template>
+    <template #description>
+      <p>
+        My name is
+        <span class="font-bold italic text-primary-700">Emran</span>
+        and I'm <span class="font-bold italic text-primary-700">Full-stack developer</span>, I enjoy
+        coding and making website
+      </p>
+    </template>
   </UPageHero>
-  </template>
+</template>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

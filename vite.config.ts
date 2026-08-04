@@ -24,7 +24,12 @@ export default defineConfig({
       },
       icon: {
         clientBundle: {
-          icons: ['simple-icons:github', 'simple-icons:x'],
+          icons: [
+            'simple-icons:github',
+            'simple-icons:x',
+            'simple-icons:youtube',
+            'simple-icons:gmail',
+          ],
         },
       },
     }),
