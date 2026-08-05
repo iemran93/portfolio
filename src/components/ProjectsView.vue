@@ -37,7 +37,6 @@ const ProjectCards = ref<PageCardProps[]>([
         :title="pr.title"
         :description="pr.description"
         variant="soft"
-        :ui="{ root: 'grow mb-2 sm:mb-0 sm:mx-2' }"
         ><template #footer>
           <UButton
             icon="i-simple-icons:github"
