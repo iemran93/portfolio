@@ -7,7 +7,6 @@ defineProps({
     required: true,
   },
 })
-const delayCards = ref([200, 400, 600])
 const ProjectCards = ref<PageCardProps[]>([
   {
     title: 'DevMatch',
@@ -38,9 +37,6 @@ const ProjectCards = ref<PageCardProps[]>([
         :title="pr.title"
         :description="pr.description"
         variant="soft"
-        class="transition-opacity duration-900"
-        :style="{ transitionDelay: `${delayCards[i]}ms` }"
-        :class="show ? 'opacity-100' : 'opacity-0'"
         :ui="{ root: 'grow mb-2 sm:mb-0 sm:mx-2' }"
         ><template #footer>
           <UButton
@@ -52,6 +48,15 @@ const ProjectCards = ref<PageCardProps[]>([
             target="_blank"
           ></UButton> </template
       ></UPageCard>
+    </div>
+    <div class="flex justify-center my-2 sm:my-4 lg:my-6">
+      <UButton
+        trailing-icon="i-lucide-arrow-right"
+        size="md"
+        to="http://github.com/iemran93"
+        target="_blank"
+        >Check all projects</UButton
+      >
     </div>
   </UContainer>
 </template>

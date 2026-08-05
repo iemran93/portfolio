@@ -25,7 +25,7 @@ const links = ref<ButtonProps[]>([
   {
     label: 'Contact me',
     to: 'https://youtube.com',
-    icon: 'i-simple-icons:gmail',
+    icon: 'i-lucide-mail',
     variant: 'soft',
     color: 'primary',
   },
