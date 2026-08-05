@@ -30,7 +30,7 @@ const ProjectCards = ref<PageCardProps[]>([
     class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-15 lg:py-20 flex flex-col"
   >
     <h1 class="text-center text-4xl font-bold pb-10">Featured Projects</h1>
-    <div class="flex flex-col sm:flex-row">
+    <UPageGrid>
       <UPageCard
         v-for="(pr, i) in ProjectCards"
         :key="i"
@@ -48,7 +48,7 @@ const ProjectCards = ref<PageCardProps[]>([
             target="_blank"
           ></UButton> </template
       ></UPageCard>
-    </div>
+    </UPageGrid>
     <div class="flex justify-center my-2 sm:my-4 lg:my-6">
       <UButton
         trailing-icon="i-lucide-arrow-right"
