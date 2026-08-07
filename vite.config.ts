@@ -6,15 +6,24 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import ui from '@nuxt/ui/vite'
 import VueRouter from 'vue-router/vite'
+import Markdown from 'unplugin-vue-markdown/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     VueRouter({}),
-    vue(),
+    vue({
+      include: [/\.vue$/, /\.md$/],
+    }),
     vueJsx(),
     vueDevTools(),
+    Markdown({
+      /* options */
+    }),
     ui({
+      components: {
+        include: [/\.vue$/, /\.md$/],
+      },
       ui: {
         colors: {
           primary: 'ayu',

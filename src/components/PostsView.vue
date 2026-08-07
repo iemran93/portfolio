@@ -31,7 +31,7 @@ const ProjectCards = ref<PageCardProps[]>([
   <UContainer
     class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-15 lg:py-20 flex flex-col"
   >
-    <h1 class="text-center text-4xl font-bold pb-10">Latest Posts</h1>
+    <h1 class="text-center pb-10">Latest Posts</h1>
     <div class="flex flex-col sm:flex-row">
       <div class="grow mx-2 sm:mx-4 lg:mx-6">
         <h2 class="text-center text-2xl font-bold pb-5 text-primary">Articles</h2>
