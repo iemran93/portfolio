@@ -19,6 +19,8 @@
     "@iconify-json/simple-icons": "^1.2.93",
     "@nuxt/ui": "^4.10.0",
     "@vueuse/core": "^14.4.0",
+    "markdown-it-anchor": "^9.2.1",
+    "markdown-it-prism": "^4.0.0",
     "pinia": "^4.0.2",
     "tailwindcss": "^4.3.3",
     "unplugin-vue-markdown": "^32.0.0",

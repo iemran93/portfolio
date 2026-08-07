@@ -1,3 +1,4 @@
+import 'prismjs/themes/prism-okaidia.css'
 import './assets/main.css'
 
 import { createApp } from 'vue'
