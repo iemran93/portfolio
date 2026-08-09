@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { useArticles } from '@/composables/useArticles'
+import { useArticlesStore } from '@/stores/articles'
 import { useWindowScroll } from '@vueuse/core'
 import { watch } from 'vue'
 import { computed, ref } from 'vue'
 
-const articles = useArticles()
+const articlesStore = useArticlesStore()
 
 const page = ref(1)
 const PAGE_SIZE = 7
 const paginatedArticles = computed(() => {
   const start = (page.value - 1) * PAGE_SIZE
-  return articles.slice(start, start + PAGE_SIZE)
+  return articlesStore.articles.slice(start, start + PAGE_SIZE)
 })
 
 const { y } = useWindowScroll()
@@ -43,7 +43,11 @@ watch(page, () => {
         </UPageCard>
       </UPageBody>
     </UPage>
-    <UPagination v-model:page="page" :items-per-page="PAGE_SIZE" :total="articles.length" />
+    <UPagination
+      v-model:page="page"
+      :items-per-page="PAGE_SIZE"
+      :total="articlesStore.articles.length"
+    />
   </UContainer>
 </template>
 
