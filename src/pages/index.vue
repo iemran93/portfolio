@@ -16,14 +16,14 @@ const { isVisible: postsVisibility } = useScrollReveal('postsTarget')
     <section
       ref="pojectsTarget"
       :class="projectsVisibility ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
-      class="transition-opacity duration-900"
+      class="transition-opacity duration-700"
     >
       <ProjectsView :show="projectsVisibility" />
     </section>
     <section
       ref="postsTarget"
       :class="postsVisibility ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
-      class="transition-opacity duration-900"
+      class="transition-opacity duration-700"
     >
       <PostsView :show="postsVisibility" />
     </section>

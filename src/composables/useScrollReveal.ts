@@ -10,7 +10,7 @@ export function useScrollReveal(refName: string) {
     ([entry]) => {
       if (entry?.isIntersecting) isVisible.value = true
     },
-    { threshold: 0.5 },
+    { threshold: 0.4 },
   )
 
   return { isVisible }
