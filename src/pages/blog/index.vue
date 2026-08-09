@@ -31,7 +31,16 @@ watch(page, () => {
           :description="art.description"
           :to="art.path"
           target="_self"
-        />
+        >
+          <template #header
+            ><UBadge v-for="tag in art.tags" variant="outline" :ui="{ base: 'mx-1' }">{{
+              tag
+            }}</UBadge></template
+          >
+          <template #footer
+            ><span class="text-neutral-500 text-sm"> {{ art.date }}</span>
+          </template>
+        </UPageCard>
       </UPageBody>
     </UPage>
     <UPagination v-model:page="page" :items-per-page="PAGE_SIZE" :total="articles.length" />

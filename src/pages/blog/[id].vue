@@ -3,6 +3,7 @@ import { defineAsyncComponent } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
+
 const blogName = (route.params as { id: string }).id
 const blogPost = defineAsyncComponent(() => import(`@/blogs/${blogName}.md`))
 </script>
