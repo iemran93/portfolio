@@ -3,7 +3,13 @@ import MainHero from '@/components/MainHero.vue'
 import ProjectsView from '@/components/ProjectsView.vue'
 import PostsView from '@/components/PostsView.vue'
 import { useScrollReveal } from '@/composables/useScrollReveal'
+import { useYoutubeVideos } from '@/stores/youtube'
+import { onMounted } from 'vue'
 
+const youtubeVideos = useYoutubeVideos()
+onMounted(() => {
+  youtubeVideos.fetchYoutubeData()
+})
 const { isVisible: projectsVisibility } = useScrollReveal('pojectsTarget')
 const { isVisible: postsVisibility } = useScrollReveal('postsTarget')
 </script>

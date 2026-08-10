@@ -7,7 +7,7 @@ defineProps({
   },
   ui: {
     type: Object,
-    require: false,
+    required: false,
   },
 })
 </script>

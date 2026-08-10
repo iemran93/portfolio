@@ -60,6 +60,7 @@ export default defineConfig({
             'simple-icons:x',
             'simple-icons:youtube',
             'simple-icons:gmail',
+            'simple-icons:youtube',
           ],
         },
       },
