@@ -3,6 +3,7 @@ import { useArticlesStore } from '@/stores/articles'
 import { useWindowScroll } from '@vueuse/core'
 import { watch } from 'vue'
 import { computed, ref } from 'vue'
+import ArticleCard from '@/components/ArticleCard.vue'
 
 const articlesStore = useArticlesStore()
 
@@ -24,23 +25,7 @@ watch(page, () => {
     <UPage>
       <UPageHeader title="Blogs" :ui="{ root: 'flex flex-col items-center' }" />
       <UPageBody>
-        <UPageCard
-          v-for="art in paginatedArticles"
-          :key="art.path"
-          :title="art.title"
-          :description="art.description"
-          :to="art.path"
-          target="_self"
-        >
-          <template #header
-            ><UBadge v-for="tag in art.tags" variant="outline" :ui="{ base: 'mx-1' }">{{
-              tag
-            }}</UBadge></template
-          >
-          <template #footer
-            ><span class="text-neutral-500 text-sm"> {{ art.date }}</span>
-          </template>
-        </UPageCard>
+        <ArticleCard :articles="paginatedArticles" />
       </UPageBody>
     </UPage>
     <UPagination

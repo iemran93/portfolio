@@ -1,17 +1,10 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import { parseFrontmatter } from '@/util/parse-frontmatter'
-
-interface Articles {
-  path: string
-  title: string
-  date: string
-  description: string
-  tags?: string[]
-}
+import type { Article } from '@/types/Article'
 
 export const useArticlesStore = defineStore('articles', () => {
-  const articles = ref<Articles[]>([])
+  const articles = ref<Article[]>([])
 
   const fetchArticlesData = () => {
     const modules = import.meta.glob('/src/blogs/*.md', {

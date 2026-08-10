@@ -48,8 +48,9 @@ const ProjectCards = ref<PageCardProps[]>([
           ></UButton> </template
       ></UPageCard>
     </UPageGrid>
-    <div class="flex justify-center my-2 sm:my-4 lg:my-6">
+    <div class="flex justify-center my-4 sm:my-6 lg:my-8">
       <UButton
+        variant="outline"
         trailing-icon="i-lucide-arrow-right"
         size="md"
         to="http://github.com/iemran93"
