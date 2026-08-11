@@ -26,7 +26,7 @@ const items = computed<NavigationMenuItem[]>(() => [
 
 <template>
   <UHeader title="Emran Dev">
-    <UNavigationMenu :items="items" />
+    <UNavigationMenu highlight :items="items" />
     <template #right>
       <UColorModeButton />
     </template>

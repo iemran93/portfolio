@@ -16,6 +16,18 @@
   --color-ayu-900: #5c3f15;
   --color-ayu-950: #33220b;
 
+  --color-brand-50: #f0fdf3;
+  --color-brand-100: #dcfae2;
+  --color-brand-200: #baf3c6;
+  --color-brand-300: #86e59d;
+  --color-brand-400: #4fd370;
+  --color-brand-500: #39d353;
+  --color-brand-600: #24b03e;
+  --color-brand-700: #1e8a33;
+  --color-brand-800: #1c6d2c;
+  --color-brand-900: #195a27;
+  --color-brand-950: #093213;
+
   /*font*/
   --font-sans: 'Robot Mono', system-ui, sans-serif;
 }
