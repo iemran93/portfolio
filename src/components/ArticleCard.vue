@@ -14,6 +14,7 @@ defineProps({
 
 <template>
   <UPageCard
+    v-if="articles.length > 0"
     v-for="art in articles"
     :key="art.path"
     :title="art.title"
@@ -31,6 +32,7 @@ defineProps({
       ><span class="text-neutral-500 text-sm"> {{ art.date }}</span>
     </template>
   </UPageCard>
+  <p v-else class="text-center text-neutral-400">No blogs yet</p>
 </template>
 
 <style scoped></style>

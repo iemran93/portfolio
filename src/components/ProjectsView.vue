@@ -9,19 +9,17 @@ defineProps({
 })
 const ProjectCards = ref<PageCardProps[]>([
   {
-    title: 'DevMatch',
-    description: 'Connect developer and build up teams',
-    to: 'https://github.com',
+    title: 'Social Network',
+    description:
+      'A Facebook-like social network application with a React/Next.js frontend and Go backend API',
+    to: 'https://github.com/iemran93/social-network',
+    target: '_blank',
   },
   {
-    title: 'Deer',
-    description: 'Expense Management',
-    to: 'https://github.com',
-  },
-  {
-    title: 'Deer',
-    description: 'Expense Management',
-    to: 'https://github.com',
+    title: 'Code Keeper',
+    description: 'Full CI/CD pipeline with GitLab(locally) and micro-services architecture',
+    to: 'https://github.com/iemran93/code-keeper',
+    target: '_blank',
   },
 ])
 </script>
@@ -36,6 +34,8 @@ const ProjectCards = ref<PageCardProps[]>([
         :key="i"
         :title="pr.title"
         :description="pr.description"
+        :to="pr.to"
+        :target="pr.target"
         variant="soft"
         ><template #footer>
           <UButton

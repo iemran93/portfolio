@@ -14,9 +14,10 @@ defineProps({
 
 <template>
   <UPageCard
+    v-if="youtubeVideo.length > 0"
+    v-for="yv in youtubeVideo"
     orientation="horizontal"
     icon="i-simple-icons-youtube"
-    v-for="yv in youtubeVideo"
     :key="yv.id"
     :title="yv.title"
     :to="yv.url"
@@ -25,6 +26,7 @@ defineProps({
   >
     <img :src="`${yv.thumbnail}`" alt="Tailwind CSS" class="w-full" />
   </UPageCard>
+  <p v-else class="text-center text-neutral-400 my-2 sm:my-4 lg:my-6">No videos yet</p>
 </template>
 
 <style scoped></style>

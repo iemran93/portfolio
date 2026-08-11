@@ -29,7 +29,7 @@
   --color-brand-950: #093213;
 
   /*font*/
-  --font-sans: 'Robot Mono', system-ui, sans-serif;
+  --font-sans: 'Roboto Mono', system-ui, sans-serif;
 }
 
 @layer base {

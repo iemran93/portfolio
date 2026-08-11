@@ -9,18 +9,21 @@ const links = ref<ButtonProps[]>([
     icon: 'i-simple-icons-github',
     variant: 'ghost',
     color: 'neutral',
+    target: '_blank',
   },
   {
-    to: 'https://x.com/iemran',
+    to: 'https://x.com/@byteEmran',
     icon: 'i-simple-icons:x',
     variant: 'ghost',
     color: 'neutral',
+    target: '_blank',
   },
   {
-    to: 'https://youtube.com',
+    to: 'https://www.youtube.com/@byte-emran',
     icon: 'i-simple-icons:youtube',
     variant: 'ghost',
     color: 'neutral',
+    target: '_blank',
   },
   {
     label: 'Contact me',
@@ -28,16 +31,18 @@ const links = ref<ButtonProps[]>([
     icon: 'i-lucide-mail',
     variant: 'soft',
     color: 'primary',
+    target: '_blank',
   },
 ])
 </script>
 
 <template>
   <UPageHero
-    title="Hello there"
+    title="Hi, I'm Emran!"
+    descriptio
     orientation="vertical"
     :links="links"
-    :ui="{ container: 'py-10 sm:py-15 lg:py-20' }"
+    :ui="{ container: 'py-10 sm:py-15 lg:py-20', title: 'text-4xl sm:text-6xl' }"
   >
     <template #headline>
       <div class="w-full flex justify-center">
@@ -46,10 +51,8 @@ const links = ref<ButtonProps[]>([
     </template>
     <template #description>
       <p>
-        My name is
-        <span class="font-bold italic text-primary-700">Emran</span>
-        and I'm <span class="font-bold italic text-primary-700">Full-stack developer</span>, I enjoy
-        coding and making website
+        I'm <span class="font-bold italic text-primary-700">Full-stack developer</span>. I
+        architect, build, and deploy end-to-end web platforms using the modern ecosystem.
       </p>
     </template>
   </UPageHero>
