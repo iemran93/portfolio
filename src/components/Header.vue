@@ -17,9 +17,9 @@ const items = computed<NavigationMenuItem[]>(() => [
     active: route.path.startsWith('/about'),
   },
   {
-    label: 'uses',
-    to: '/uses',
-    active: route.path.startsWith('/uses'),
+    label: 'contact',
+    to: '/contact',
+    active: route.path.startsWith('/contact'),
   },
 ])
 </script>
