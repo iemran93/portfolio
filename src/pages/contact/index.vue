@@ -3,6 +3,8 @@ import type { FormSubmitEvent } from '@nuxt/ui'
 import { reactive } from 'vue'
 import * as z from 'zod'
 
+const FORM_URI = import.meta.env.VITE_FORMSPREE_URI
+
 const schema = z.object({
   email: z.email('Invalid email'),
   title: z.string('Title invalid').min(2, 'Must be at least 2 characters'),
@@ -19,8 +21,22 @@ const state = reactive<Partial<Schema>>({
 
 const toast = useToast()
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  toast.add({ title: 'Success', description: 'The form has been submitted.', color: 'success' })
-  console.log(event.data)
+  try {
+    const res = await fetch(FORM_URI, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(event.data),
+    })
+    if (!res.ok) {
+      throw new Error('Failed sending message')
+    }
+    toast.add({ title: 'Success', description: 'The form has been submitted.', color: 'success' })
+  } catch (e) {
+    toast.add({ title: 'Failed', description: 'Please try again later.', color: 'error' })
+  }
 }
 </script>
 
@@ -29,8 +45,8 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     <UPage>
       <UPageHeader title="Contact" :ui="{ root: 'flex flex-col items-center' }" />
       <h3 class="py-6 sm:py-8 text-center">
-        Let me build you somthing
-        <span class="font-bold italic text-primary-700">amazing!</span>
+        Got an idea? Let's make it
+        <span class="font-bold italic text-primary-700">real</span>.
       </h3>
       <UForm
         :schema="schema"
