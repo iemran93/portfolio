@@ -48,7 +48,6 @@ const articleCards = computed(() => articlesStore.articles.slice(0, 3))
           :youtubeVideo="youtubeVideos.videos"
           :ui="{ root: 'my-2 sm:my-4 lg:my-6' }"
         />
-        <p v-else class="text-center text-neutral-400 my-2 sm:my-4 lg:my-6">No videos yet</p>
         <div class="flex justify-center my-2 sm:my-4 lg:my-6">
           <UButton
             variant="outline"

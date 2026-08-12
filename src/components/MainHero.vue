@@ -27,11 +27,11 @@ const links = ref<ButtonProps[]>([
   },
   {
     label: 'Contact me',
-    to: 'https://youtube.com',
-    icon: 'i-lucide-mail',
+    to: '/contact',
+    icon: 'i-simple-icons:minutemailer',
     variant: 'soft',
     color: 'primary',
-    target: '_blank',
+    target: '_self',
   },
 ])
 </script>

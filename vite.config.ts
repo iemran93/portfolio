@@ -42,10 +42,26 @@ export default defineConfig({
       wrapperClasses: 'markdown-body',
     }),
     ui({
+      // You can also directly target the input component if needed
       components: {
         include: [/\.vue$/, /\.md$/],
       },
       ui: {
+        formField: {
+          slots: {
+            container: 'mt-1 relative w-full',
+          },
+        },
+        input: {
+          slots: {
+            root: 'w-full',
+          },
+        },
+        textarea: {
+          slots: {
+            root: 'w-full',
+          },
+        },
         colors: {
           primary: 'ayu',
           secondary: 'purple',
@@ -61,6 +77,7 @@ export default defineConfig({
             'simple-icons:youtube',
             'simple-icons:gmail',
             'simple-icons:youtube',
+            'simple-icons:minutemailer',
           ],
         },
       },
