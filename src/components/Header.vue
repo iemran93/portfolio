@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui'
+import {
+  default as UColorModeButton,
+  default as UHeader,
+  default as UNavigationMenu,
+} from '@nuxt/ui'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
