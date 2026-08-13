@@ -20,9 +20,9 @@ export default defineConfig({
     }),
     ui({
       // You can also directly target the input component if needed
-      components: {
-        include: [/\.vue$/, /\.md$/],
-      },
+      // components: {
+      //   include: [/\.vue$/, /\.md$/],
+      // },
       ui: {
         formField: {
           slots: {
