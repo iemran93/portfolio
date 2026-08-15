@@ -12,14 +12,14 @@ const links = ref<ButtonProps[]>([
     target: '_blank',
   },
   {
-    to: 'https://x.com/@byteEmran',
+    to: 'https://x.com/@bytemran',
     icon: 'i-simple-icons:x',
     variant: 'ghost',
     color: 'neutral',
     target: '_blank',
   },
   {
-    to: 'https://www.youtube.com/@byte-emran',
+    to: 'https://www.youtube.com/@bytemran',
     icon: 'i-simple-icons:youtube',
     variant: 'ghost',
     color: 'neutral',
