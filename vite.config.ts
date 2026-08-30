@@ -10,6 +10,7 @@ import Markdown from 'unplugin-vue-markdown/vite'
 import MarkdownItAnchor from 'markdown-it-anchor'
 import MarkdownItPrism from 'markdown-it-prism'
 import MarkdownIt from 'markdown-it'
+import { applyMarkdownRules } from './src/util/markdown-it-rules'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -81,6 +82,7 @@ export default defineConfig({
         })
 
         mdInstance.use(MarkdownItPrism)
+        applyMarkdownRules(mdInstance)
       },
       // Class names for the wrapper div
       wrapperClasses: 'markdown-body',

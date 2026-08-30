@@ -1,4 +1,4 @@
-import 'prismjs/themes/prism-okaidia.css'
+import './assets/prisma-ayu-dark.css'
 import './assets/main.css'
 
 import { createApp } from 'vue'

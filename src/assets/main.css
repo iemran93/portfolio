@@ -42,4 +42,7 @@
   h3 {
     @apply text-lg font-semibold;
   }
+  .blogBody pre {
+    @apply bg-[var(--ui-bg-muted)] rounded-lg p-4 overflow-x-auto my-6;
+  }
 }
