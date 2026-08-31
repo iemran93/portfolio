@@ -10,6 +10,7 @@ import Markdown from 'unplugin-vue-markdown/vite'
 import MarkdownItAnchor from 'markdown-it-anchor'
 import MarkdownItPrism from 'markdown-it-prism'
 import MarkdownIt from 'markdown-it'
+import markdownItToc from 'markdown-it-table-of-contents'
 import { applyMarkdownRules } from './src/util/markdown-it-rules'
 
 // https://vite.dev/config/
@@ -81,6 +82,9 @@ export default defineConfig({
           }),
         })
         mdInstance.use(MarkdownItPrism)
+        mdInstance.use(markdownItToc, {
+          includeLevel: [1, 2],
+        })
         applyMarkdownRules(mdInstance)
       },
       // Class names for the wrapper div
