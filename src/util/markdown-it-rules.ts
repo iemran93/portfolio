@@ -15,9 +15,12 @@ export function applyMarkdownRules(md: MarkdownIt) {
     h6: 'text-sm font-semibold mt-4 mb-2 scroll-mt-20 text-gray-500',
   }
 
-  rules.heading_open = (tokens, idx) => {
-    const tag = tokens[idx]!.tag // h1..h6
-    return `<${tag} class="${headingClasses[tag] ?? ''}">`
+  rules.heading_open = (tokens, idx, options, _env, self) => {
+    const token = tokens[idx]
+    const tag = token!.tag
+
+    token?.attrJoin('class', headingClasses[tag] ?? '')
+    return self.renderToken(tokens, idx, options)
   }
 
   // ── Paragraphs ────────────────────────────

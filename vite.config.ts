@@ -80,7 +80,6 @@ export default defineConfig({
             placement: 'before',
           }),
         })
-
         mdInstance.use(MarkdownItPrism)
         applyMarkdownRules(mdInstance)
       },
