@@ -117,8 +117,9 @@ systemctl stop # stop a running service
 systemctl status <service> # show service state & info 
 systemctl restart # restart a running service
 systemctl reload # reload service config files 'if supported by service'
-systemctl enable # enable a service to start on boot
-systemctl disable # disable a service to not start on boot
+systemctl enable # enable a service to start on boot "--now: enable & start"
+systemctl disable # disable a service to not start on boot "--now: disable & stop"
+systemctl cat <service> # service unit file content
 
 # -- Edit
 systemctl edit <service> # edit a service (create snippit) 'partial edit'
